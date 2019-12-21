@@ -1,0 +1,20 @@
+@import "sass/variables";
+@import "sass/mixins";
+
+.btn {
+  border-radius: 4px;
+  color: lighten($primary-color, 10%);
+  border: none;
+  padding: 10px 70px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .4s;
+
+  &:hover {
+    box-shadow: 0 10px 10px rgba(black, 0.2);
+    @include translateY(-2px);
+  }
+}

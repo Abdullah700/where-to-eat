@@ -1,0 +1,16 @@
+@import "sass/mixins";
+@import "sass/animations";
+
+.icon {
+  position: absolute;
+  box-shadow: 0 0 0 0 rgba(white, 1);
+  transform: scale(1);
+  animation: pulse 5s infinite;
+  border-radius: 50%;
+  cursor: pointer;
+  @include trbl(25px, 25px);
+
+  [dir=ltr] & {
+    @include trbl(25px, null, null, 25px);
+  }
+}

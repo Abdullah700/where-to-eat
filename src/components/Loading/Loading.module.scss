@@ -1,0 +1,22 @@
+@import "sass/variables";
+
+.loading {
+  transition: all .5s;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: $primary-color;
+
+  & svg {
+    max-width: 25%;
+    max-height: 25%;
+    margin: auto;
+  }
+}
+
+
+
+

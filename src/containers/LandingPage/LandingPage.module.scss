@@ -1,0 +1,23 @@
+@import "sass/variables";
+
+.main-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  padding: 1.5vw 2.5vw;
+  background-color: rgba($primary-color, .9);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &:after {
+    content: '';
+    background: url('../../assets/images/bg-img.jpg') no-repeat center center;
+    background-size: cover;
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    z-index: -1;
+  }
+}
