@@ -1,4 +1,47 @@
+@import "sass/variables";
 .container {
   grid-area: header;
   background-color: #f2f3f4;
+
+  &__header {
+    color: $primary-color;
+    font-size: 55px;
+    margin: 0;
+  }
+
+  &__rating {
+    margin: 10px 0;
+    display: inline-block;
+  }
+
+  &__icons-grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    padding: 0 25px;
+    display: flex;
+    position: relative;
+
+    &:not(:last-of-type) {
+      &::before {
+        content: '';
+        height: 100%;
+        width: 1px;
+        position: absolute;
+        background-color: black;
+        left: 0;
+
+        [dir='ltr'] & {
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+  }
 }

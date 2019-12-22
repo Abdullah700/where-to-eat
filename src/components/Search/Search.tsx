@@ -27,9 +27,11 @@ export default ({isLandingPage = true}: Props) => {
                         longitude: position.coords.longitude.toFixed(9),
                         latitude: position.coords.latitude.toFixed(9)
                     };
-                    axios.get(`GenerateFS.php?uid=${cords.latitude},${cords.longitude}`).then((res) => {
+                    axios.get(`GenerateFS.php?uid=${cords.latitude},${cords.longitude}&get_param=value`).then((res) => {
                         const data: RestData = res.data;
+                        setIsLoading(false);
                         history.push('/location', data);
+                    }, () => {
                         setIsLoading(false)
                     });
                     if (errorMessage) {
